@@ -10,7 +10,7 @@ export default function SearchInput({ handleSearch }: SearchInputProps) {
     <div className="d-flex justify-content-end">
       <InputGroup className="mb-3 w-50">
         <Form.Control
-          placeholder="Recipient's username"
+          placeholder="Search..."
           aria-label="baris pencarian"
           aria-describedby="button-search"
           onChange={handleSearch}
