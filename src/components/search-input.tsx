@@ -1,10 +1,11 @@
 import React from "react";
 import { Form, InputGroup, Button } from "react-bootstrap";
 
-// interface Props = {
-// }
+interface SearchInputProps {
+  handleSearch: (e: { target: { value: string } }) => void;
+}
 
-export default function SearchInput() {
+export default function SearchInput({ handleSearch }: SearchInputProps) {
   return (
     <div className="d-flex justify-content-end">
       <InputGroup className="mb-3 w-50">
@@ -12,9 +13,10 @@ export default function SearchInput() {
           placeholder="Recipient's username"
           aria-label="baris pencarian"
           aria-describedby="button-search"
+          onChange={handleSearch}
         />
         <Button variant="outline-secondary" id="button-search">
-          Cari
+          Search
         </Button>
       </InputGroup>
     </div>
